@@ -1,5 +1,4 @@
 <% provide(:title, "Home") %>
-<!DOCTYPE html>
 <html>
 <head>
 	<title><%= yield(:title) %></title>
@@ -7,6 +6,16 @@
 <body>
 <div class="center jumbotron">
 <h2>This is the main DashBoard</h2>
+<%= form_for(:home, url: home) do |f| %>
+<div class="field">
+	<%= f.label :name %><br>
+	<%= f.text_field :name %>
+</div>
+<div class="field">
+	<%= f.label :password %><br>
+	<%= f.text_field :password %>
+</div>
+
 <%= link_to "Log In Now!", '#', class: "btn btn-lg btn-primary" %>
 </div>
 </body>

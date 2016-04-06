@@ -5,7 +5,7 @@ class CreateMembers < ActiveRecord::Migration
       t.integer :mid
       t.string :name
       t.string :email
-      t.string :password
+      t.digest :password
       t.string :company_name
       t.integer :mobile_no
       t.datetime :created_at
