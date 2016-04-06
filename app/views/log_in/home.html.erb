@@ -1,0 +1,13 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= yield(:title) %></title>
+</head>
+<body>
+<div class="center jumbotron">
+<h2>This is the main DashBoard</h2>
+<%= link_to "Log In Now!", '#', class: "btn btn-lg btn-primary" %>
+</div>
+</body>
+</html>
