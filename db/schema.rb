@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160406100113) do
+ActiveRecord::Schema.define(version: 20160407180525) do
 
   create_table "members", force: :cascade do |t|
     t.integer  "mid"
@@ -19,19 +19,11 @@ ActiveRecord::Schema.define(version: 20160406100113) do
     t.string   "email"
     t.string   "company_name"
     t.integer  "mobile_no"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
-  create_table "projects", force: :cascade do |t|
-    t.integer  "pid"
-    t.string   "project_name"
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.integer  "prject_hours"
-    t.boolean  "project_complete"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
+  add_index "members", ["email"], name: "index_members_on_email", unique: true
 
 end

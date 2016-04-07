@@ -14,13 +14,13 @@ class LogInControllerTest < ActionController::TestCase
   test "should get about" do
     get :about
     assert_response :success
-    assert_select "title", "About Us | #{@base_title}"
+    assert_select "title", "About Us#{@base_title}"
   end
 
   test "should get contact_us" do
     get :contact_us
     assert_response :success
-    assert_select "title", "Contact Us | #{@base_title}"
+    assert_select "title", "Contact Us#{@base_title}"
   end
 
 end
